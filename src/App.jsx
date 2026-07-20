@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, NavLink } from "react-router-dom";
 
 import Page from './components/Page';
 
@@ -23,13 +23,21 @@ import Page from './components/Page';
 function App() {
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/greetings" replace />} />
-        <Route path="/greetings" element={<Page />} />
-        <Route path="/profiles" element={<Page />} />
-        <Route path="/hobbies" element={<Page />} />
-        <Route path="*" element={<h1>404 — Not Found</h1>} />
-      </Routes>
+      <div className="layout">
+        <nav className="nav">
+          <NavLink to="/greetings">Greetings</NavLink>
+          <NavLink to="/profiles">Profiles</NavLink>
+          <NavLink to="/hobbies">My Hobbies</NavLink>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Navigate to="/greetings" replace />} />
+          <Route path="/greetings" element={<Page />} />
+          <Route path="/profiles" element={<Page />} />
+          <Route path="/hobbies" element={<Page />} />
+          <Route path="*" element={<h1>404 — Not Found</h1>} />
+        </Routes>
+      </div>
     </HashRouter>
   )
 }
