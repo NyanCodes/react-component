@@ -1,0 +1,30 @@
+.card {
+  background-color: white;
+  min-width: 200px;
+  max-width: 420px;
+  min-height: 200px;
+  border-radius: 8px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card p.centered {
+  text-align: center;
+}
+
+.card ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
